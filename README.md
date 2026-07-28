@@ -45,8 +45,6 @@ Within a single model and appliance, sample NN's "off" and "on" grids form a cou
 
 Across models, sample NN of a given appliance shares the same temperature context (and, for EV, the same sub-attribute condition), but NOT the same latent noise. The three generators operate in different latent spaces (the diffusion model's initial noise is a 360x96 field; the GAN uses a 256-dim latent vector; the VAE uses a convolutional latent), so a common noise seed is not meaningful across them. Only the conditioning is held fixed across models.
 
-EV and PP samples use different temperature contexts: EV samples are conditioned on temperature profiles from EV-source households, PP samples on temperature profiles from pool-pump-source households (pool-pump load is strongly weather-driven, so PP-source contexts are the representative choice).
-
 
 ## Sub-attribute conditions (EV only)
 
